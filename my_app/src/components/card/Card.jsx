@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import StyleCard from './Card.module.css';
-import { BasketContext } from '../card/BasketContext';
+import { Link } from 'react-router-dom';
 
 function Card({ id, name, price, image }) {
 
-  const { incrementBasket } = useContext(BasketContext);
 
   return (
+
+
+    
     <div className={StyleCard.card}>
       <div className={StyleCard.imageContainer}>
         <img src={image} alt={name} className={StyleCard.image} />
@@ -29,7 +31,7 @@ function Card({ id, name, price, image }) {
         <div className={StyleCard.price}>
           <span>{price}$</span>
         </div>
-        <button className={StyleCard.cartButton} onClick={incrementBasket}>
+        <button className={StyleCard.cartButton}>
           <svg
             className={StyleCard.cartIcon}
             stroke="currentColor"
@@ -44,10 +46,11 @@ function Card({ id, name, price, image }) {
               strokeLinecap="round"
             ></path>
           </svg>
-          <span>Add to Basket</span>
+          <span><Link to='/buy'>Buy</Link></span>
         </button>
       </div>
     </div>
+  
   );
 }
 

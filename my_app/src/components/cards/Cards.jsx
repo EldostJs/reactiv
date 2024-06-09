@@ -21,9 +21,10 @@ function Cards() {
         {id:15, name:'Jordan Jumpman', price: 45, image:'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dbba41d9-03a8-402c-863e-80174c6f8d2d/jordan-jumpman-mens-slides-bPj6q5.png' },
     ];
 
+
     return (
         <div className={StyleCards.md}>
-            {cars.map((car) =>
+            {cars?.map((car) =>
                 <Card key={car.id} {...car} />
             )}
         </div>

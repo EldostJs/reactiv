@@ -4,8 +4,7 @@ import StyleFooter from './Footercss.module.css';
 function Footer() {
   return (
     <section className={StyleFooter.container}>
-      <h1>Footer</h1>
-      <h3 className={StyleFooter.h}>Hover over the circle below</h3>
+      <h3 className={StyleFooter.h}></h3>
       <div className={StyleFooter.footer}>
         <div className={StyleFooter.button}></div>
         <div className={StyleFooter.container}>
