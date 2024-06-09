@@ -1,20 +1,34 @@
-import React from 'react'
-import StyleSell from './Sell.module.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import StyleSell from './Sell.module.css';
 
-function Sell({ id, name, price, image }) {
+function Sell() {
+    const { id, name, price, image } = useParams();
+
     return (
-        <div>
-            <div>
-                <button><Link to='/catalog'>Back</Link></button>
+        <div className={StyleSell.productContainer}>
+            <div className={StyleSell.productImage}>
+                <img src={image} alt={name} />
             </div>
-            <div className={StyleSell.md}>
-                <div className={StyleSell.card}>
-                    <span>{name}</span>
+            <div className={StyleSell.productDetails}>
+                <span className={StyleSell.rating}>★ Highly Rated</span>
+                <h1>{name}</h1>
+                <p className={StyleSell.productType}>Men's Road Running Shoes</p>
+                <p className={StyleSell.price}>${price}</p>
+                <div className={StyleSell.fitOptions}>
+                    <Link to='/buc' className={StyleSell.fb} ><button className={`${StyleSell.fitBtn} ${StyleSell.selected}`}>Buy</button></Link>
+                    <Link to='/catalog' className={StyleSell.fb}><button className={StyleSell.fitBtn}>Go to Back</button></Link>
+                </div>
+                <div className={StyleSell.sizeOptions}>
+                    <button className={StyleSell.sizeBtn}>39</button>
+                    <button className={StyleSell.sizeBtn}>40</button>
+                    <button className={StyleSell.sizeBtn}>41</button>
+                    <button className={StyleSell.sizeBtn}>42</button>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Sell
+export default Sell;

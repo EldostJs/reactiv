@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.bag, .summary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 45%;
+}
+.bag h2, .summary h2 {
+    margin-top: 0;
+}
+.bag img {
+    width: 100px;
+    height: auto;
+}
+.itemDetails {
+    display: flex;
+    align-items: center;
+}
+.itemInfo {
+    margin-left: 20px;
+}
+.itemInfo p {
+    margin: 5px 0;
+}
+.summary div {
+    margin-bottom: 10px;
+}
+.promoCode, .checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

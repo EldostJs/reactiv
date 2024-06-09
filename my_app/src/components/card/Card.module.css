@@ -45,19 +45,7 @@
     text-overflow: ellipsis;
   }
   
-  .size {
-    font-size: 0.75rem;
-    color: var(--light);
-  }
   
-  .listSize {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin-top: 0.25rem;
-    padding: 0;
-    list-style: none;
-  }
   
   .itemList {}
   
@@ -115,4 +103,8 @@
   .cartButton .cartIcon {
     width: 1rem;
   }
-  
+  .bl{
+    width: 90%;
+    color: white;
+    text-decoration: none;
+  }

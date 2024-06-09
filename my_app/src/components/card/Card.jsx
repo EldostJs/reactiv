@@ -8,7 +8,7 @@ function Card({ id, name, price, image }) {
   return (
 
 
-    
+
     <div className={StyleCard.card}>
       <div className={StyleCard.imageContainer}>
         <img src={image} alt={name} className={StyleCard.image} />
@@ -16,22 +16,11 @@ function Card({ id, name, price, image }) {
       <div className={StyleCard.title}>
         <span>{name}</span>
       </div>
-      <div className={StyleCard.size}>
-        <span>Size</span>
-        <ul className={StyleCard.listSize}>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>37</button></li>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>38</button></li>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>39</button></li>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>40</button></li>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>41</button></li>
-          <li className={StyleCard.itemList}><button className={StyleCard.itemListButton}>42</button></li>
-        </ul>
-      </div>
       <div className={StyleCard.action}>
         <div className={StyleCard.price}>
           <span>{price}$</span>
         </div>
-        <button className={StyleCard.cartButton}>
+        <Link className={StyleCard.bl} to={`/buy/${id}/${name}/${price}/${encodeURIComponent(image)}`}>        <button className={StyleCard.cartButton}>
           <svg
             className={StyleCard.cartIcon}
             stroke="currentColor"
@@ -46,11 +35,11 @@ function Card({ id, name, price, image }) {
               strokeLinecap="round"
             ></path>
           </svg>
-          <span><Link to='/buy'>Buy</Link></span>
-        </button>
+          Buy</button>
+        </Link>
       </div>
     </div>
-  
+
   );
 }
 
