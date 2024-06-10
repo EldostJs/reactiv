@@ -14,7 +14,6 @@ function Header() {
             <ul className={StyleHeader["slider-menu"]}>
               <li><Link to='/' className={StyleHeader.lis}>About</Link></li>
               <li><Link to='/catalog' className={StyleHeader.lis}>Catalog</Link></li>
-              <li><Link to='/buc' className={StyleHeader.lis}>Bucked</Link></li>
             </ul>
           </div>
           <p className={StyleHeader["aeu-signature"]}>❤️ EldostJs 👩‍💻</p>

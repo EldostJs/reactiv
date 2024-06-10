@@ -1,6 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import StyleSell from './Sell.module.css';
 
 function Sell() {
@@ -13,12 +12,20 @@ function Sell() {
             </div>
             <div className={StyleSell.productDetails}>
                 <span className={StyleSell.rating}>★ Highly Rated</span>
-                <h1>{name}</h1>
+                <h1 className={StyleSell.bb}>{name}</h1>
                 <p className={StyleSell.productType}>Men's Road Running Shoes</p>
                 <p className={StyleSell.price}>${price}</p>
                 <div className={StyleSell.fitOptions}>
-                    <Link to='/buc' className={StyleSell.fb} ><button className={`${StyleSell.fitBtn} ${StyleSell.selected}`}>Buy</button></Link>
-                    <Link to='/catalog' className={StyleSell.fb}><button className={StyleSell.fitBtn}>Go to Back</button></Link>
+                    <Link 
+                        to='/buc' 
+                        state={{ id, name, price, image }} 
+                        className={StyleSell.fb}
+                    >
+                        <button className={`${StyleSell.fitBtn} ${StyleSell.selected}`}>Buy</button>
+                    </Link>
+                    <Link to='/catalog' className={StyleSell.fb}>
+                        <button className={StyleSell.fitBtn}>Go to Back</button>
+                    </Link>
                 </div>
                 <div className={StyleSell.sizeOptions}>
                     <button className={StyleSell.sizeBtn}>39</button>
